@@ -1,4 +1,6 @@
-##Firmware for Freifunk Bielefeld
+##Experimentelle Firmware for Freifunk Talheim
+
+Derived from firmare for Freifunk Bielefeld - thank you!
 
 The firmware turns a common wireless router into a mesh networking device.
 It connects to similar routers in the area and builds a Wifi-mesh network
@@ -18,7 +20,7 @@ Build Commands:
 git clone git://git.openwrt.org/12.09/openwrt.git
 cd openwrt
 
-git clone https://github.com/freifunk-bielefeld/firmware.git
+git clone https://github.com/ironiemix/firmware.git
 cp -rf firmware/* . && cp firmware/.config .
 rm -rf firmware
 

@@ -34,8 +34,8 @@ config cert px5g
 
 	# Location
 	option country DE
-	option state NRW
-	option location Bielefeld
+	option state BW
+	option location Talheim
 
 	# Common name
 	option commonname OpenWrt
