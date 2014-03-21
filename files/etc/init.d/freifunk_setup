@@ -61,7 +61,7 @@ config_wifi() {
 	if [ `uci get wireless.$ds.channel` -gt 35 ]; then
 		uci set wireless.$ds.channel=36
 	else
-		uci set wireless.$ds.channel=1
+		uci set wireless.$ds.channel=11
 	fi
 
 	uci set wireless.$ds.country=DE
