@@ -1,4 +1,4 @@
-##Experimentelle Firmware for Freifunk Talheim
+##Experimental firmware for Freifunk Talheim
 
 Derived from firmare for Freifunk Bielefeld - thank you!
 
@@ -20,7 +20,7 @@ Build Commands:
 git clone git://git.openwrt.org/12.09/openwrt.git
 cd openwrt
 
-git clone https://github.com/ironiemix/firmware.git
+git clone -b feature/freifunk-talheim https://github.com/ironiemix/firmware.git
 cp -rf firmware/* . && cp firmware/.config .
 rm -rf firmware
 
