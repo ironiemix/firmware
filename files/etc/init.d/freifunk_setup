@@ -250,6 +250,10 @@ done
 uci set freifunk.@settings[0].mac="$mac"
 uci set freifunk.@settings[0].default_ah_ssid="$ah_ssid"
 
+# set local hostname 
+local_hostname=`echo $public_ip4 | awk -F"." '{print "ffth-node-"$3"-"$4}'`
+uci set system.@system[0].hostname="$local_hostname"
+
 #prevent own hostname as DNS entry
 uci set dhcp.@dnsmasq[0].add_local_domain='0'
 uci set dhcp.@dnsmasq[0].add_local_hostname='0'

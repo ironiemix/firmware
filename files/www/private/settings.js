@@ -452,18 +452,21 @@ function collect_switch_info(device)
 		tagged_port : uci.misc.data.tagged_port, //port number, no suffix
 	};
 
-	//if device is an interface name, then it is probably the base ifname
-	var lan_ifname = uci.network_defaults.lan.ifname;
-	if(inArray(device, split(lan_ifname)))
-		obj.ifname = device;
-
 	//board specific settings
 	switch(uci.misc.data.board)
 	{
 		case 'TL-WR1043ND':
 			obj.port_map = [['WAN',0], ['1',1], ['2',2], ['3',3], ['4',4],['_', '5']];
 			break;
+		case 'TL-WR841N-v8':
+			obj.ifname = 'eth1';
+			break;
 	}
+	
+	//if device is an interface name, then it is probably the base ifname
+	var lan_ifname = uci.network_defaults.lan.ifname;
+	if(inArray(device, split(lan_ifname)))
+		obj.ifname = device;
 
 	//create generic ports string
 	if(!obj.ports)
