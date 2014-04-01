@@ -11,7 +11,6 @@ case "$GET_func" in
 		uci export -qn wireless
 		uci export -qn network
 		uci export -qn network_defaults
-		uci export -qn autoupdater
 
 		#get the tagged port of the switch
 		echo "package misc"
