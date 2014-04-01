@@ -209,8 +209,8 @@ set_routes()
                 
                 resolvsize=$(du /tmp/resolv.conf.auto | cut -f 1)           
                 if [ "$resolvsize" == "0" ]; then                           
-                    echo "(I) Set default nameserver to '$public_gw_ip'.
-                    echo "nameserver $public_gw_ip" > /tmp/resolv.conf.a
+                    echo "(I) Set default nameserver to '$public_gw_ip'."
+                    echo "nameserver $public_gw_ip" > /tmp/resolv.conf.auto
                 fi  
 		}
 	fi
