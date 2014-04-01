@@ -11,10 +11,22 @@ Content-type: text/html
 
 html, body {
     height: 98%;
+    font: 1em sans-serif;
 }
 
 #header {
-	margin:1%;
+   margin: 1em auto 1em auto; 
+   border: 1px solid #ccc;
+   padding: 1em;
+   width: 40em;    
+   min-width: 40em;
+   background-color: #fdd892; 
+}
+
+#header h1 {
+    color: #555;
+    margin-bottom: 1em;
+    font-size: 1.3em;
 }
 
 #footer {
@@ -28,9 +40,7 @@ html, body {
 </head>
 <body>
 <div id="header">
-<b>Name des Knoten: </b>
-<% uci get system.@system[0].hostname %>
-<br />
+<h1>Freifunk Talheim - <% uci get system.@system[0].hostname %></h1>
 <b>Eigene IPv4-Adresse: </b>
 <% ip -4 address show dev br-public 2> /dev/null | sed -rn 's/.*inet6? (.*[^:])\/.*/\1/p' | head -1 %>
 <br />
