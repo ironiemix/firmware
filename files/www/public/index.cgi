@@ -18,8 +18,8 @@ html, body {
    margin: 1em auto 1em auto; 
    border: 1px solid #ccc;
    padding: 1em;
-   width: 40em;    
-   min-width: 40em;
+   width: 80%;    
+   min-width: 80%;
    background-color: #fdd892; 
 }
 
@@ -46,6 +46,9 @@ html, body {
 <br />
 <b>Eigene IPv6-Addresse: </b>
 <% ip -6 address show dev br-public 2> /dev/null | sed -rn 's/.*inet6? (.*[^:])\/.*/\1/p' | head -1 %>
+<br />
+<b>&Ouml;ffentlicher fastd-key: </b>
+<% uci show fastd.default.key | cut -d"=" -f 2 %>
 <br />
 <b>Anzahl bekannter Knoten: </b>
 <% echo $((`batctl tg | grep '^ \*' | cut -b 33-49 | sort | uniq | wc -l 2> /dev/null`+1)) %>
@@ -85,7 +88,7 @@ fi
 
 <div id="footer">
     <span style="float: left;"><a href="#" id="link">Login</a></span>
-    <span style="float: right;"><a href="http://freifunk.talheim.net/">Version</a> <% uci get -q freifunk.@settings[0].version || echo "???" %></span>
+    <span style="float: right;"><a href="http://www.freifunk-talheim.de/">Version</a> <% uci get -q freifunk.@settings[0].version || echo "???" %></span>
 </div>
 
 <script type="text/javascript">

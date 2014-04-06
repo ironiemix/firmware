@@ -1,6 +1,6 @@
 
 config settings
-	option 'version' '20140402-ffth'
+	option 'version' '20140406-ffth'
 	option 'prefix6' 'fdef:17a1:ffc1::/64'
 	option 'prefix4' '10.171.0.0/16'
 	option 'mac' ''
