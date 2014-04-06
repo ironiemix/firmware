@@ -88,7 +88,7 @@ fi
 
 <div id="footer">
     <span style="float: left;"><a href="#" id="link">Login</a></span>
-    <span style="float: right;"><a href="http://www.freifunk-talheim.de/">Version</a> <% uci get -q freifunk.@settings[0].version || echo "???" %></span>
+    <span style="float: right;"><a href="http://freifunk.talheim.net">Version</a> <% uci get -q freifunk.@settings[0].version || echo "???" %></span>
 </div>
 
 <script type="text/javascript">
